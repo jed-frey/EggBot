@@ -26,8 +26,9 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 import hersheydata  # data file w/ Hershey font data
 import inkex
 import simplestyle
-
-import hello
+import shutil
+import os
+import click
 
 Debug = False
 FONT_GROUP_V_SPACING = 45
@@ -180,7 +181,64 @@ class Hershey(inkex.Effect):
                 wmax = w
         return wmax + wmin, v
 
+import sys
+import datetime
 
 if __name__ == '__main__':
+
+
+    with open("hershey.debug", "w") as fid:
+        fid.write("#" * 20)
+        fid.write("\n# ")
+        fid.write(str(datetime.datetime.now()))
+        fid.write("\n")
+        fid.write("#" * 20)
+
+        fid.write("\nExecutable: \n\t")
+        fid.write(sys.executable)
+
+        fid.write("\nPaths:\n")
+        for path in sys.path:
+            fid.write("\t")
+            fid.write(path)
+            fid.write("\n")
+
+        fid.write("\nArgs:\n")
+        for arg in sys.argv:
+            fid.write("\t")
+            fid.write(arg)
+            fid.write("\n")
+
+    in_file = sys.argv[-1]
+    if not in_file.endswith(".svg"):
+        out_file = sys.argv[-1] + ".svg"
+        shutil.copy2(sys.argv[-1], out_file)
+    else:
+        out_file = in_file
+
+    with open("hershey.sh", "w") as fid:
+        fid.write("#!/usr/bin/env bash")
+        fid.write("\n# "*2)
+        fid.write("# "+__file__)
+        fid.write("\n# "*2)
+        fid.write(str(datetime.datetime.now()))
+        fid.write("\n"*2)
+        fid.write("export PYTHONPATH=");
+        fid.write(os.pathsep.join(sys.path))
+        fid.write("\n")
+        fid.write(sys.executable)
+        fid.write(" ")
+        fid.write(sys.argv[0])
+        fid.write(" ")
+        for arg in sys.argv[1:-1]:
+            key, value = arg.split("=")
+            fid.write("{}='{}'".format(key, value))
+            fid.write(" ")
+        fid.write(out_file)
+        fid.write(" > hershey.out.svg")
+
+
+        fid.write("\n"*2)
+
     e = Hershey()
     e.affect()

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-  <_name>Hershey Text</_name>
+  <_name>Hershey Text [local]</_name>
   <id>org.evilmad.render.hershe</id>
   <!-- Version 2.2 November 28, 2017 -->
   <dependency type="executable" location="extensions">hershey.py</dependency>
