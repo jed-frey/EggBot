@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
-    <_name>Post process trace bitmap</_name>
-    <id>command.eggbot.contributed.eggbot_pptb</id>
-    <dependency type="extension">org.inkscape.output.svg.inkscape</dependency>
-    <dependency type="executable" location="extensions">eggbot_pptb.py</dependency>
-    <dependency type="executable" location="extensions">inkex.py</dependency>       <dependency type="executable" location="extensions">simplestyle.py</dependency>
-    <_param name="Header" type="description" xml:space="preserve">
+  <_name>Post process trace bitmap</_name>
+  <id>command.eggbot.contributed.eggbot_pptb</id>
+  <dependency type="extension">org.inkscape.output.svg.inkscape</dependency>
+  <dependency type="executable" location="extensions">eggbot_pptb.py</dependency>
+  <dependency type="executable" location="extensions">inkex.py</dependency>
+  <dependency type="executable" location="extensions">simplestyle.py</dependency>
+  <_param name="Header" type="description" xml:space="preserve">
 This extension is intended for use after
 running the Inkscape "Trace Bitmap" tool
 of the "Path" menu
@@ -26,20 +27,16 @@ Running this extension:
 4. Can optionally outline the traced
     regions
     </_param>
-
-    <param name="removeImage" type="boolean" _gui-text="Remove original bitmap image?">true</param>
-    <param name="fillRegions" type="boolean" _gui-text="Fill each traced region with color?">true</param>
-    <param name="outlineRegions" type="boolean" _gui-text="Outline each traced region?">true</param>
-
-    <effect needs-live-preview="false">
-      <object-type>all</object-type>
-      <effects-menu>
-	<submenu _name="EggBot Contributed"/>
-      </effects-menu>
-    </effect>
-
-    <script>
-      <command reldir="extensions" interpreter="python">eggbot_pptb.py</command>
-    </script>
-
+  <param name="removeImage" type="boolean" _gui-text="Remove original bitmap image?">true</param>
+  <param name="fillRegions" type="boolean" _gui-text="Fill each traced region with color?">true</param>
+  <param name="outlineRegions" type="boolean" _gui-text="Outline each traced region?">true</param>
+  <effect needs-live-preview="false">
+    <object-type>all</object-type>
+    <effects-menu>
+      <submenu _name="EggBot Contributed"/>
+    </effects-menu>
+  </effect>
+  <script>
+    <command reldir="extensions" interpreter="python">eggbot_pptb.py</command>
+  </script>
 </inkscape-extension>

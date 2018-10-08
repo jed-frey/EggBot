@@ -21,16 +21,16 @@ as to have the length (number of times to wrap) x 3200 pixels.
       <param name="stretch" type="boolean" _gui-text="Stretch the text horizontally to account for the egg's geometry? ">true</param>
       <param name="flip" type="boolean" _gui-text="Plot with the egg's bottom at the egg motor? ">false</param>
       <param name="text" type="string" _gui-text="Text ">How do you drop an egg 2 meters without it breaking? Drop it from 3 meters: it won't break for the first 2!  *   If a rooster laid an egg at the peak of a roof, which side would it roll down? Neither side: roosters don't lay eggs!  *  What's the best day to eat eggs? Fry day  *  What happens when you tickle eggs? They crack up!  *  What sport are eggs good at? Running!  * What kind of jokes do eggs tell? Egg yolks  *  What's an egg's favorite robot? The EggBot!</param>
-<!-- OMELET (2 servings): For a firm omelet, beat 2 eggs with a fork until blended.  Beat in 2 tablespoons cream or milk, 1/4 teaspoon salt, and a pinch of white pepper or paprika.  In a non-stick skillet, melt 3/4 tablespoons butter.  When hot, add the egg mixture and cook over low heat.  With a spatula, lift the edges and, by tilting the skillet, allow the uncooked custard to run underneath the omelet.  When the omelet is cooked to an even consistency, fold over and serve.  <times><i&>Bon appetit!</i></times> -->
+      <!-- OMELET (2 servings): For a firm omelet, beat 2 eggs with a fork until blended.  Beat in 2 tablespoons cream or milk, 1/4 teaspoon salt, and a pinch of white pepper or paprika.  In a non-stick skillet, melt 3/4 tablespoons butter.  When hot, add the egg mixture and cook over low heat.  With a spatula, lift the edges and, by tilting the skillet, allow the uncooked custard to run underneath the omelet.  When the omelet is cooked to an even consistency, fold over and serve.  <times><i&>Bon appetit!</i></times> -->
       <param name="fontfamily" type="optiongroup" appearance="minimal" _gui-text="Starting font ">
-	<_option value="sans">Sans</_option>
-	<_option value="times">Times</_option>
-	<_option value="script">Script</_option>
+        <_option value="sans">Sans</_option>
+        <_option value="times">Times</_option>
+        <_option value="script">Script</_option>
       </param>
     </page>
     <page name="markup" _gui-text="Markup">
       <_param name="aboutpage" type="description" xml:space="preserve">
-Simple&#160;markup&#160;may&#160;be&#160;used&#160;to&#160;switch&#160;between&#160;type&#160;faces&#160;(fonts)
+Simple markup may be used to switch between type faces (fonts)
 as well as to select bold, italic and emphasized type faces.
 
 Font selection:
@@ -57,10 +57,10 @@ type faces are available.  For these faces, use of the &lt;b&gt;, &lt;em&gt; and
 
 &lt;cyrillic&gt; -- Cyrillic
 &lt;futural&gt;, &lt;futram&gt; -- Sans 1-stroke, bold
-&lt;gothiceng&gt;,&#160;&lt;gothicger&gt;,&#160;&lt;gothicita&gt;&#160;--&#160;Gothic&#160;English,&#160;German,&#160;Italian
+&lt;gothiceng&gt;, &lt;gothicger&gt;, &lt;gothicita&gt; -- Gothic English, German, Italian
 &lt;greek&gt;, &lt;timesg;&gt; -- Greek 1-stroke, medium
 &lt;japanese&gt; -- Japanese
-&lt;scripts&gt;, &lt;scriptc&gt;, &lt;cursive&gt; -- Script&#160;1-stroke,&#160;medium,&#160;alternate
+&lt;scripts&gt;, &lt;scriptc&gt;, &lt;cursive&gt; -- Script 1-stroke, medium, alternate
 &lt;timesi&gt;, &lt;timesib&gt; -- Serif medium italic, bold italic
 &lt;timesr&gt;, &lt;timesrb&gt; -- Serif medium, bold
 
@@ -71,7 +71,7 @@ For a complete list of EMS fonts, refer to the "Font face" list in the Render/He
 
 
 </_param>
-</page>
+    </page>
     <page name="fonts2" _gui-text="Symbol Fonts">
       <_param name="aboutpage1" type="description" xml:space="preserve">
 In addition to type faces for text, several type faces of symbols
@@ -92,9 +92,9 @@ are also available.  When these type faces are used, the &lt;b&gt;,
 
 
 </_param>
-</page>
-<page name="info" _gui-text="About...">
-<_param name="aboutpage3" type="description" xml:space="preserve">
+    </page>
+    <page name="info" _gui-text="About...">
+      <_param name="aboutpage3" type="description" xml:space="preserve">
 This extension renders a passage of text tilted at an angle
 so as to wrap around an egg in a spiral.  To render the text,
 the "Hershey" fonts for plotters is used.  These fonts are
@@ -109,8 +109,8 @@ For additional information, please visit:
 
   www.evilmadscientist.com/go/hershey
 </_param>
-</page>
-</param>
+    </page>
+  </param>
   <effect needs-live-preview="true" needs-document="no">
     <object-type>all</object-type>
     <effects-menu>

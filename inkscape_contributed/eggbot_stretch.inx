@@ -9,7 +9,6 @@
   <dependency type="executable" location="extensions">cubicsuperpath.py</dependency>
   <dependency type="executable" location="extensions">cspsubdiv.py</dependency>
   <dependency type="executable" location="extensions">bezmisc.py</dependency>
-
   <_param name="Header" type="description" xml:space="preserve">
 This extension will horizontally stretch your drawing.  The
 amount of stretch increases towards the poles of your egg
@@ -42,12 +41,8 @@ Eggbot Control extension.  It needs to be applied here
 before plotting as all curves will be rendered to straight
 line segments by this extension.
   </_param>
-
-  <param name="maxDy" type="float" min="0.0001" max="999.0"
-	 _gui-text="Vertical smoothing (lower for more)">5.0</param>
-  <param name="smoothness" type="float" min="0.0001" max="5"
-	 _gui-text="   Curve smoothing (lower for more)">0.2</param>
-
+  <param name="maxDy" type="float" min="0.0001" max="999.0" _gui-text="Vertical smoothing (lower for more)">5.0</param>
+  <param name="smoothness" type="float" min="0.0001" max="5" _gui-text="   Curve smoothing (lower for more)">0.2</param>
   <effect needs-live-preview="false">
     <object-type>all</object-type>
     <effects-menu>

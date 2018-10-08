@@ -11,7 +11,6 @@
   <dependency type="executable" location="extensions">cubicsuperpath.py</dependency>
   <dependency type="executable" location="extensions">cspsubdiv.py</dependency>
   <dependency type="executable" location="extensions">bezmisc.py</dependency>
-
   <_param name="Header" type="description" xml:space="preserve">
 Iteratively twist and self-inscribe
 a polygon within itself.
@@ -32,12 +31,8 @@ Inkscape extensions directory for
 this extensions' Python code.
 ***
   </_param>
-
-  <param name="nSteps" type="int" min="1" max="100"
-	 _gui-text="   Number of twists">8</param>
-  <param name="fRatio" type="float" min="-10" max="10" precision="5"
-	 _gui-text="   Step ratio">0.15</param>
-
+  <param name="nSteps" type="int" min="1" max="100" _gui-text="   Number of twists">8</param>
+  <param name="fRatio" type="float" min="-10" max="10" precision="5" _gui-text="   Step ratio">0.15</param>
   <effect needs-live-preview="false">
     <object-type>all</object-type>
     <effects-menu>

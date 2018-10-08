@@ -6,8 +6,7 @@
   <dependency type="executable" location="extensions">eggbot_reorder.py</dependency>
   <dependency type="executable" location="extensions">inkex.py</dependency>
   <!-- Written by Matthew Beckler for the Egg-Bot project. Email questions and comments to matthew at mbeckler dot org -->
-
-	  <_param name="Header" type="description" xml:space="preserve">
+  <_param name="Header" type="description" xml:space="preserve">
  This extension will perform simple optimizations 
  of selected paths. It will try to change the 
  order of plotting so as to reduce the amount
@@ -27,7 +26,6 @@
  may find it useful. Be sure to save a copy of 
  your document before running this routine.
             </_param>
-
   <!--
   <param name="reverse" type="boolean" _gui-text="Allow paths to be reversed*">false</param>
   <param name="wrap" type="boolean" _gui-text="Allow wrap-around egg axis*">false</param>
@@ -39,7 +37,7 @@
   <effect needs-live-preview="false" needs-document="no">
     <object-type>all</object-type>
     <effects-menu>
-        <submenu _name="EggBot"/>
+      <submenu _name="EggBot"/>
     </effects-menu>
   </effect>
   <script>
