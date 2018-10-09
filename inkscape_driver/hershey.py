@@ -79,7 +79,7 @@ class Hershey(inkex.Effect):
 
     def effect(self):
 
-        output_generated = False
+        output_generated = True
 
         # Embed text in group to make manipulation easier:
         g_attribs = {inkex.addNS('label', 'inkscape'): 'Hershey Text'}
