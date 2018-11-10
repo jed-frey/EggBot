@@ -154,11 +154,16 @@ class EggBotReorderPaths(inkex.Effect):
                 self.current_layer.append(self.selected[id_])
 
             if air_distance_default > 0:  # don't divide by zero. :P
+
+                air_distance_default=float(air_distance_default)
+                air_distance_ordered=float(air_distance_ordered)
+
                 improvement_pct = 100 * ((air_distance_default - air_distance_ordered) / air_distance_default)
+
                 inkex.errormsg(gettext.gettext("Selected paths have been reordered and optimized for quicker EggBot plotting.\n\n"
-                                               "Original air-distance: {0:d}\n"
-                                               "Optimized air-distance: {1:d}\n"
-                                               "Distance reduced by: {2:1.2f}%\n\n"
+                                               "Original air-distance: {0:.2f}\n"
+                                               "Optimized air-distance: {1:.2f}\n"
+                                               "Distance reduced by: {:1.2f}%\n\n"
                                                "Have a nice day!".format(air_distance_default, air_distance_ordered, improvement_pct)))
             else:
                 inkex.errormsg(gettext.gettext("Unable to start. Please select multiple distinct paths. :)"))
