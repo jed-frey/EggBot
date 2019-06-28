@@ -147,6 +147,9 @@ class EggBotReorderPaths(inkex.Effect):
 
             # sort / order the objects
             sort_order, air_distance_default, air_distance_ordered = find_ordering_naive(objlist)
+            air_distance_default=float(air_distance_default)
+            air_distance_ordered=float(air_distance_ordered)
+
 
             for id_ in sort_order:
                 # There's some good magic here, that you can use an
@@ -156,8 +159,8 @@ class EggBotReorderPaths(inkex.Effect):
             if air_distance_default > 0:  # don't divide by zero. :P
                 improvement_pct = 100 * ((air_distance_default - air_distance_ordered) / air_distance_default)
                 inkex.errormsg(gettext.gettext("Selected paths have been reordered and optimized for quicker EggBot plotting.\n\n"
-                                               "Original air-distance: {0:d}\n"
-                                               "Optimized air-distance: {1:d}\n"
+                                               "Original air-distance: {0:f}\n"
+                                               "Optimized air-distance: {1:f}\n"
                                                "Distance reduced by: {2:1.2f}%\n\n"
                                                "Have a nice day!".format(air_distance_default, air_distance_ordered, improvement_pct)))
             else:
