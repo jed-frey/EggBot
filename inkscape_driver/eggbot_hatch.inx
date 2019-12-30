@@ -27,38 +27,25 @@ Hatched figures will be grouped with their fills.
     </page>
     <page name="info" _gui-text="More info...">
       <_param name="aboutpage" type="description" xml:space="preserve">
-Hatch spacing is the distance between hatch lines, 
-measured in units of screen pixels (px). Angles are in
-degrees from horizontal; for example 90 is vertical.
+Hatch spacing is the distance between hatch lines, measured in units of screen pixels (px). Angles are in degrees from horizontal; for example 90 is vertical.
 
-The Crosshatch option will apply a second set of
-hatches, perpendicular to the first.
+The Crosshatch option will apply a second set of hatches, perpendicular to the first.
 
-The "Connect nearby ends" option will attempt to connect
-nearby line ends with a smoothly flowing curve, to improve
-the smoothness of plotting.
+The "Connect nearby ends" option will attempt to connect nearby line ends with a smoothly flowing curve, to improve the smoothness of plotting.
 
-The Range parameter sets the distance (in hatch widths)
-over which that option searches for segments to join. 
-Large values may result in hatches where you don't want
-them. Consider using a value in the range of 2-4. 
+The Range parameter sets the distance (in hatch widths) over which that option searches for segments to join. Large values may result in hatches where you don't want them. Consider using a value in the range of 2-4. 
 
-The Inset option allows you to hold back the edges of the
-fill somewhat from the edge of your original object.
-This can improve performance, as it allows you to more
-reliably "color inside the lines" when using pens.
+The Inset option allows you to hold back the edges of the fill somewhat from the edge of your original object. This can improve performance, as it allows you to more reliably "color inside the lines" when using pens.
 
-The hatches will be the same color and width
-as the original object.
+The hatches will be the same color and width as the original object.
 
-The Tolerance parameter affects how precisely
-the hatches try to fill the input paths.</_param>
+The Tolerance parameter affects how precisely the hatches try to fill the input paths.</_param>
     </page>
   </param>
   <effect needs-live-preview="true">
     <object-type>all</object-type>
     <effects-menu>
-      <submenu _name="EggBot"/>
+      <submenu _name="_jextensions"/>
     </effects-menu>
   </effect>
   <script>
