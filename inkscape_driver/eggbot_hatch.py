@@ -101,10 +101,18 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
+from __future__ import print_function
 import math
 
+
+import os
+import sys
+
+sys.path.append(os.path.join(os.path.expanduser("~"), ".config", "inkscape", "extensions", "plotink"))
+sys.path.append("/usr/share/inkscape/extensions")
+
 try:
-    from plot_utils_import import from_dependency_import # plotink
+    from plotink.plot_utils_import import from_dependency_import # plotink
     inkex = from_dependency_import('ink_extensions.inkex')
     simplepath = from_dependency_import('ink_extensions.simplepath')
     simpletransform = from_dependency_import('ink_extensions.simpletransform')
@@ -121,7 +129,7 @@ except:
     import cspsubdiv
     import bezmisc
 
-import plot_utils  # https://github.com/evil-mad/plotink
+from plotink import plot_utils  # https://github.com/evil-mad/plotink
 
 N_PAGE_WIDTH = 3200
 N_PAGE_HEIGHT = 800
